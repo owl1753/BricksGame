@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BricksGame</title>
+    <style>
+        body{
+            -webkit-user-select:none; 
+            -moz-user-select:none; 
+            -ms-user-select:none; 
+            user-select:none;
+        }
+        .Main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+        .Main>div:last-child{
+            display: flex;
+            flex-direction: column-reverse;;
+            margin-left: 50px;
+        }
+        #time-bar{
+            width: 50px;
+            background-color: green;
+            margin-bottom: 20px;
+        }
+        #canvas{
+            background-color: black;
+        }
+        #reload-button{
+            width: 50px;
+            height: 50px;
+            background-image: url('./assets/reload.png');
+            background-size: 50px;
+        }
+        #score{
+            color: black;
+            font-size: 50px;
+            height: 50px;
+        }
+        #score-wrapper{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <div>
+            <div id="score-wrapper">
+                <div id="score">점수 : 0</div>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div>
+            <div id="reload-button"></div>
+            <div id="time-bar"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
